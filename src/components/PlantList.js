@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import PlantCard from "./PlantCard";
 
-function PlantList({ search }) {
-const [plants, setPlants] = useState([])
+function PlantList({ search ,plants, setPlants}) {
+
 const [error, setError] = useState(null);
 
 // const [update, setUpdate] = useState(false)
@@ -27,7 +27,7 @@ const [error, setError] = useState(null);
     setPlants(filteredPlants)
   }
 
-
+ 
   
   const filteredPlants = plants.filter((plant) => {
     const lowercaseSearch = search.toLowerCase()
